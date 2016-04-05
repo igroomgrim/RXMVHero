@@ -78,6 +78,7 @@
 		981FCD1A1CB3CC3800A2A1FF /* RXMVHero */ = {
 			isa = PBXGroup;
 			children = (
+				981FCD311CB3CE1400A2A1FF /* Model */,
 				981FCD2F1CB3CD9600A2A1FF /* AppDelegate */,
 				981FCD301CB3CD9D00A2A1FF /* ViewController */,
 				981FCD2D1CB3CD8600A2A1FF /* Storyboard */,
@@ -118,6 +119,13 @@
 				981FCD1D1CB3CC3800A2A1FF /* ViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		981FCD311CB3CE1400A2A1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
