@@ -7,11 +7,14 @@ target 'RXMVHero' do
 pod 'RxSwift',    '~> 2.0'
 pod 'RxCocoa',    '~> 2.0'
 
-#NetWork
+#Network
 pod 'Moya/RxSwift'
 
 #JSON
 pod 'SwiftyJSON'
+
+#Crypto
+pod 'CommonCrypto'
 
 end
 

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.3.0)
+  - CommonCrypto (1.1)
   - Moya/Core (6.4.0):
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
@@ -13,6 +14,7 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - CommonCrypto
   - Moya/RxSwift
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
   Moya: 4d526954c8afd79820991393d40d7d8af756ceee
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
