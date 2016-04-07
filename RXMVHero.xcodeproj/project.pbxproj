@@ -13,6 +13,7 @@
 		981FCD211CB3CC3800A2A1FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD1F1CB3CC3800A2A1FF /* Main.storyboard */; };
 		981FCD231CB3CC3800A2A1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD221CB3CC3800A2A1FF /* Assets.xcassets */; };
 		981FCD261CB3CC3800A2A1FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD241CB3CC3800A2A1FF /* LaunchScreen.storyboard */; };
+		981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD321CB6506800A2A1FF /* GithubUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		981FCD221CB3CC3800A2A1FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		981FCD251CB3CC3800A2A1FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		981FCD271CB3CC3800A2A1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981FCD321CB6506800A2A1FF /* GithubUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUser.swift; path = Model/GithubUser.swift; sourceTree = "<group>"; };
 		9998E77B8C179F7EC088B5BF /* Pods-RXMVHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXMVHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXMVHero/Pods-RXMVHero.debug.xcconfig"; sourceTree = "<group>"; };
 		D97064FDD92819818882A290 /* Pods-RXMVHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXMVHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXMVHero/Pods-RXMVHero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 		981FCD311CB3CE1400A2A1FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				981FCD321CB6506800A2A1FF /* GithubUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				981FCD1E1CB3CC3800A2A1FF /* ViewController.swift in Sources */,
+				981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */,
 				981FCD1C1CB3CC3800A2A1FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
