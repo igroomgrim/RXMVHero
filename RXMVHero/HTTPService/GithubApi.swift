@@ -10,46 +10,46 @@ import Foundation
 import Moya
 
 enum ApiService {
-    case GetUser
-    case GetUserWithLoginName(login: String)
+    case GetCharacters
+    case GetCharactersByID(id: String)
 }
 
 extension ApiService: TargetType {
     
     var baseURL: NSURL {
-        return NSURL(string: "https://api.github.com/")!
+        return NSURL(string: "http://gateway.marvel.com")!
     }
     
     var path: String {
         switch self {
-        case .GetUser:
-            return "users"
-        case .GetUserWithLoginName(let login):
-            return "users/\(login)"
+        case .GetCharacters:
+            return "/v1/public/characters"
+        case .GetCharactersByID(let id):
+            return "/v1/public/characters/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .GetUser, .GetUserWithLoginName(_):
+        case .GetCharacters, .GetCharactersByID(_):
             return .GET
         }
     }
     
     var parameters: [String: AnyObject]? {
         switch self {
-        case .GetUser:
+        case .GetCharacters:
             return nil
-        case .GetUserWithLoginName(let login):
-            return ["login": login]
+        case .GetCharactersByID(let id):
+            return ["id": id]
         }
     }
     
     var sampleData: NSData {
         switch self {
-        case .GetUser:
+        case .GetCharacters:
             return "[]".dataUsingEncoding(NSUTF8StringEncoding)!
-        case .GetUserWithLoginName(_):
+        case .GetCharactersByID(_):
             return "[]".dataUsingEncoding(NSUTF8StringEncoding)!
         }
     }
