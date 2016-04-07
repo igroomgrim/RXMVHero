@@ -10,11 +10,13 @@ PODS:
   - RxCocoa (2.3.1):
     - RxSwift (~> 2.3.1)
   - RxSwift (2.3.1)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Moya/RxSwift
   - RxCocoa (~> 2.0)
   - RxSwift (~> 2.0)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
@@ -22,5 +24,6 @@ SPEC CHECKSUMS:
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
   RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

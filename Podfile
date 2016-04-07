@@ -9,5 +9,9 @@ pod 'RxCocoa',    '~> 2.0'
 
 #NetWork
 pod 'Moya/RxSwift'
+
+#JSON
+pod 'SwiftyJSON'
+
 end
 
