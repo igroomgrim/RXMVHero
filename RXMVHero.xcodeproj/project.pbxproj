@@ -15,6 +15,7 @@
 		981FCD261CB3CC3800A2A1FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD241CB3CC3800A2A1FF /* LaunchScreen.storyboard */; };
 		981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD321CB6506800A2A1FF /* GithubUser.swift */; };
 		981FCD361CB6561B00A2A1FF /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD351CB6561B00A2A1FF /* GithubApi.swift */; };
+		981FCD3D1CB691B600A2A1FF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD3C1CB691B600A2A1FF /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		981FCD271CB3CC3800A2A1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		981FCD321CB6506800A2A1FF /* GithubUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUser.swift; path = Model/GithubUser.swift; sourceTree = "<group>"; };
 		981FCD351CB6561B00A2A1FF /* GithubApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubApi.swift; path = HTTPService/GithubApi.swift; sourceTree = "<group>"; };
+		981FCD381CB6914D00A2A1FF /* RXMVHero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXMVHero-Bridging-Header.h"; sourceTree = "<group>"; };
+		981FCD3C1CB691B600A2A1FF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Helper/Extension.swift; sourceTree = "<group>"; };
 		9998E77B8C179F7EC088B5BF /* Pods-RXMVHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXMVHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXMVHero/Pods-RXMVHero.debug.xcconfig"; sourceTree = "<group>"; };
 		D97064FDD92819818882A290 /* Pods-RXMVHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXMVHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXMVHero/Pods-RXMVHero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,7 @@
 				981FCD2F1CB3CD9600A2A1FF /* AppDelegate */,
 				981FCD301CB3CD9D00A2A1FF /* ViewController */,
 				981FCD2D1CB3CD8600A2A1FF /* Storyboard */,
+				981FCD371CB6911200A2A1FF /* Helper */,
 				981FCD2E1CB3CD8E00A2A1FF /* Assets */,
 			);
 			path = RXMVHero;
@@ -140,6 +144,15 @@
 				981FCD351CB6561B00A2A1FF /* GithubApi.swift */,
 			);
 			name = HTTPService;
+			sourceTree = "<group>";
+		};
+		981FCD371CB6911200A2A1FF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				981FCD381CB6914D00A2A1FF /* RXMVHero-Bridging-Header.h */,
+				981FCD3C1CB691B600A2A1FF /* Extension.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981FCD3D1CB691B600A2A1FF /* Extension.swift in Sources */,
 				981FCD1E1CB3CC3800A2A1FF /* ViewController.swift in Sources */,
 				981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */,
 				981FCD1C1CB3CC3800A2A1FF /* AppDelegate.swift in Sources */,
@@ -381,10 +395,13 @@
 			baseConfigurationReference = 9998E77B8C179F7EC088B5BF /* Pods-RXMVHero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RXMVHero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igroomgrim.RXMVHero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RXMVHero/RXMVHero-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -393,10 +410,12 @@
 			baseConfigurationReference = D97064FDD92819818882A290 /* Pods-RXMVHero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RXMVHero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.igroomgrim.RXMVHero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RXMVHero/RXMVHero-Bridging-Header.h";
 			};
 			name = Release;
 		};
