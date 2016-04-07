@@ -14,6 +14,18 @@ enum ApiService {
     case GetCharactersByID(id: String)
 }
 
+private func JSONResponseDataFormatter(data: NSData) -> NSData {
+    do {
+        let dataAsJSON = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+        let prettyData =  try NSJSONSerialization.dataWithJSONObject(dataAsJSON, options: .PrettyPrinted)
+        return prettyData
+    } catch {
+        return data //fallback to original data if it cant be serialized
+    }
+}
+
+let MVProvider = RxMoyaProvider<ApiService>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
+
 extension ApiService: TargetType {
     
     var baseURL: NSURL {
@@ -21,6 +33,7 @@ extension ApiService: TargetType {
     }
     
     var path: String {
+        
         switch self {
         case .GetCharacters:
             return "/v1/public/characters"
@@ -37,11 +50,18 @@ extension ApiService: TargetType {
     }
     
     var parameters: [String: AnyObject]? {
+        
+        let publicKey = ""
+        let privateKey = ""
+        let apiKey = ""
+        let ts = NSDate().timeIntervalSince1970.description
+        let hash = "\(ts)\(privateKey)\(publicKey)".md5
+        
         switch self {
         case .GetCharacters:
-            return nil
+            return ["apikey":apiKey, "ts":ts, "hash": hash]
         case .GetCharactersByID(let id):
-            return ["id": id]
+            return ["id": id, "apikey":apiKey, "ts":ts, "hash": hash]
         }
     }
     
