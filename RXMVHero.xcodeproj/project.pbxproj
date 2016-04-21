@@ -14,7 +14,7 @@
 		981FCD231CB3CC3800A2A1FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD221CB3CC3800A2A1FF /* Assets.xcassets */; };
 		981FCD261CB3CC3800A2A1FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981FCD241CB3CC3800A2A1FF /* LaunchScreen.storyboard */; };
 		981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD321CB6506800A2A1FF /* GithubUser.swift */; };
-		981FCD361CB6561B00A2A1FF /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD351CB6561B00A2A1FF /* GithubApi.swift */; };
+		981FCD361CB6561B00A2A1FF /* MVApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD351CB6561B00A2A1FF /* MVApi.swift */; };
 		981FCD3D1CB691B600A2A1FF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD3C1CB691B600A2A1FF /* Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		981FCD251CB3CC3800A2A1FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		981FCD271CB3CC3800A2A1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		981FCD321CB6506800A2A1FF /* GithubUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubUser.swift; path = Model/GithubUser.swift; sourceTree = "<group>"; };
-		981FCD351CB6561B00A2A1FF /* GithubApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubApi.swift; path = HTTPService/GithubApi.swift; sourceTree = "<group>"; };
+		981FCD351CB6561B00A2A1FF /* MVApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVApi.swift; path = HTTPService/MVApi.swift; sourceTree = "<group>"; };
 		981FCD381CB6914D00A2A1FF /* RXMVHero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXMVHero-Bridging-Header.h"; sourceTree = "<group>"; };
 		981FCD3C1CB691B600A2A1FF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Helper/Extension.swift; sourceTree = "<group>"; };
 		9998E77B8C179F7EC088B5BF /* Pods-RXMVHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXMVHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXMVHero/Pods-RXMVHero.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		981FCD341CB6559400A2A1FF /* HTTPService */ = {
 			isa = PBXGroup;
 			children = (
-				981FCD351CB6561B00A2A1FF /* GithubApi.swift */,
+				981FCD351CB6561B00A2A1FF /* MVApi.swift */,
 			);
 			name = HTTPService;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				981FCD1E1CB3CC3800A2A1FF /* ViewController.swift in Sources */,
 				981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */,
 				981FCD1C1CB3CC3800A2A1FF /* AppDelegate.swift in Sources */,
-				981FCD361CB6561B00A2A1FF /* GithubApi.swift in Sources */,
+				981FCD361CB6561B00A2A1FF /* MVApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

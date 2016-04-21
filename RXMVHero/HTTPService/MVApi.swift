@@ -1,5 +1,5 @@
 //
-//  GithubApi.swift
+//  MVApi.swift
 //  RXMVHero
 //
 //  Created by Anak Mirasing on 4/7/16.
@@ -61,7 +61,7 @@ extension ApiService: TargetType {
         case .GetCharacters:
             return ["apikey":apiKey, "ts":ts, "hash": hash]
         case .GetCharactersByID(let id):
-            return ["id": id, "apikey":apiKey, "ts":ts, "hash": hash]
+            return ["apikey":apiKey, "ts":ts, "hash": hash, "id": id]
         }
     }
     
