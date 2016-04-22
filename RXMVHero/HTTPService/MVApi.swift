@@ -12,6 +12,7 @@ import Moya
 enum ApiService {
     case GetCharacters
     case GetCharactersByID(id: String)
+    case GetComics
 }
 
 private func JSONResponseDataFormatter(data: NSData) -> NSData {
@@ -39,35 +40,34 @@ extension ApiService: TargetType {
             return "/v1/public/characters"
         case .GetCharactersByID(let id):
             return "/v1/public/characters/\(id)"
+        case .GetComics:
+            return "/v1/public/comics"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .GetCharacters, .GetCharactersByID(_):
+        case .GetCharacters, .GetCharactersByID(_), .GetComics:
             return .GET
         }
     }
     
     var parameters: [String: AnyObject]? {
         
-        let publicKey = ""
-        let privateKey = ""
-        let apiKey = ""
         let ts = NSDate().timeIntervalSince1970.description
-        let hash = "\(ts)\(privateKey)\(publicKey)".md5
+        let hash = "\(ts)\(MVPrivateKey)\(MVPublicKey)".md5
         
         switch self {
-        case .GetCharacters:
-            return ["apikey":apiKey, "ts":ts, "hash": hash]
+        case .GetCharacters, .GetComics:
+            return ["apikey":MVPublicKey, "ts":ts, "hash": hash]
         case .GetCharactersByID(let id):
-            return ["apikey":apiKey, "ts":ts, "hash": hash, "id": id]
+            return ["apikey":MVPublicKey, "ts":ts, "hash": hash, "id": id]
         }
     }
     
     var sampleData: NSData {
         switch self {
-        case .GetCharacters:
+        case .GetCharacters, .GetComics:
             return "[]".dataUsingEncoding(NSUTF8StringEncoding)!
         case .GetCharactersByID(_):
             return "[]".dataUsingEncoding(NSUTF8StringEncoding)!
