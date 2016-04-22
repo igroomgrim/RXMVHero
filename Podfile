@@ -16,5 +16,8 @@ pod 'SwiftyJSON'
 #Crypto
 pod 'CommonCrypto'
 
+#HUD
+pod 'SVProgressHUD', '~> 2.0.3'
+
 end
 
