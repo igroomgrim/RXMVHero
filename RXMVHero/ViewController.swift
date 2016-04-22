@@ -8,13 +8,19 @@
 
 import UIKit
 import Moya
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+    
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // 1011334 is 3-D Man
+        
+        /*
         MVProvider.request(.GetCharactersByID(id:"1011334")).subscribe { (event) -> Void in
             switch event {
             
@@ -24,12 +30,33 @@ class ViewController: UIViewController {
             case .Error(let error):
                 print("error : \(error)")
                 break
-                default:
+            
+            case .Completed:
+                print("Completed")
                 break
             }
-        }
+        }.addDisposableTo(disposeBag)
+ 
+        */
         
-        let timeIn = NSDate().timeIntervalSince1970
+        loadCharacterByID("1011999")
+        .doOnNext { response in
+            print("doOnNext")
+            print(response)
+        }
+        .doOnError({ (error:ErrorType) in
+            print("doOnError")
+            print(error)
+        })
+        .subscribe()
+        .addDisposableTo(disposeBag)
+        
+        
+        
+    }
+    
+    func loadCharacterByID(cid: String) -> Observable<Response> {
+        return MVProvider.request(.GetCharactersByID(id:cid))
     }
 
     override func didReceiveMemoryWarning() {
