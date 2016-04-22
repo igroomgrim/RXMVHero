@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B22A561CC9DE060085ED95 /* MVConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B22A551CC9DE060085ED95 /* MVConstants.swift */; };
 		72722C52B0182AC65EAC8E5B /* Pods_RXMVHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F79D48D1A08FDB53FCE9D7C /* Pods_RXMVHero.framework */; };
 		981FCD1C1CB3CC3800A2A1FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD1B1CB3CC3800A2A1FF /* AppDelegate.swift */; };
 		981FCD1E1CB3CC3800A2A1FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FCD1D1CB3CC3800A2A1FF /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14B22A551CC9DE060085ED95 /* MVConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVConstants.swift; path = Helper/MVConstants.swift; sourceTree = "<group>"; };
 		7F79D48D1A08FDB53FCE9D7C /* Pods_RXMVHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXMVHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981FCD181CB3CC3800A2A1FF /* RXMVHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXMVHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		981FCD1B1CB3CC3800A2A1FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				981FCD381CB6914D00A2A1FF /* RXMVHero-Bridging-Header.h */,
 				981FCD3C1CB691B600A2A1FF /* Extension.swift */,
+				14B22A551CC9DE060085ED95 /* MVConstants.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B22A561CC9DE060085ED95 /* MVConstants.swift in Sources */,
 				981FCD3D1CB691B600A2A1FF /* Extension.swift in Sources */,
 				981FCD1E1CB3CC3800A2A1FF /* ViewController.swift in Sources */,
 				981FCD331CB6506800A2A1FF /* GithubUser.swift in Sources */,
