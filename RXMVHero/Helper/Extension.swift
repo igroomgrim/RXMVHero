@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import SVProgressHUD
+import RxSwift
+import Moya
 
 extension String  {
     
@@ -26,5 +29,33 @@ extension String  {
         result.dealloc(digestLen)
         
         return String(format: hash as String)
+    }
+}
+
+extension Observable {
+    func showErrorHUD() -> Observable<Element> {
+        return self.doOn { event in
+            switch event {
+            case .Error(let e):
+                // Unwrap underlying error
+                guard let error = e as? Moya.Error else { throw e }
+                guard case .StatusCode(let response) = error else { throw e }
+                
+                SVProgressHUD.showErrorWithStatus("Error \(response.statusCode)")
+                
+            default: break
+            }
+        }
+    }
+}
+
+extension ViewController {
+    
+    func showLoadingHUD() {
+        SVProgressHUD.show()
+    }
+    
+    func hideLoadingHUD() {
+        SVProgressHUD.dismiss()
     }
 }
