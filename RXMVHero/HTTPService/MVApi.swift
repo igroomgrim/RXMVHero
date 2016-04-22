@@ -25,7 +25,7 @@ private func JSONResponseDataFormatter(data: NSData) -> NSData {
     }
 }
 
-let MVProvider = RxMoyaProvider<ApiService>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
+let MVProvider = RxMoyaProvider<ApiService>(plugins: [NetworkLoggerPlugin(verbose: false, responseDataFormatter: JSONResponseDataFormatter)])
 
 extension ApiService: TargetType {
     
